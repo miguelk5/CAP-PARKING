@@ -49,10 +49,10 @@ public class Parking {
                 this.carSlots--;  
                 announceCorrectResult(Car.class.getName() , this.carSlots);
                 return true;
-            } 
-        } else {
+            } else {
             announceIncorrectResult(Car.class.getName());
-        }
+            }
+        } 
         
         if ( vehicle.getClass().isAssignableFrom(Bicycle.class) ) {
             if( this.bicycleSlots!=0 )
@@ -60,10 +60,10 @@ public class Parking {
                 this.bicycleSlots--;
                 announceCorrectResult(Bicycle.class.getName() , this.bicycleSlots);
                 return true;
-            } 
-        } else {
+            } else {
             announceIncorrectResult(Bicycle.class.getName());
-        }
+            }
+        } 
         
         if ( vehicle.getClass().isAssignableFrom(MotorBike.class) ) {
             if( this.motorbikeSlots!=0 )
@@ -71,10 +71,10 @@ public class Parking {
                 this.motorbikeSlots--; 
                 announceCorrectResult(MotorBike.class.getName() , this.motorbikeSlots);
                 return true;
-            } 
-        } else {
+            } else {
             announceIncorrectResult(MotorBike.class.getName());
-        }
+            }
+        } 
         
         return result;
     }    

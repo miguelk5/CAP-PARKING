@@ -56,7 +56,7 @@ public class Controller {
         int carSlots;
         int motorBikeSlots;
         int BicycleSlots;
-        int overSizeAmount = 5;
+        int overSizeAmount = 1;
         String targetColour;
         
         if(args.length == 5){
