@@ -110,11 +110,11 @@ public class Controller {
         for( Vehicle vehicle: vehicles){
             if(myParking.getBicycleSlots()!= 0){
                 vehicle.enterParking(myParking.entryRequest(vehicle));
+                myParking.vehicles.add(vehicle);
             }
             else { System.out.println("No more Bicycle slots we stop the program");break;}                
         }
            
-        myParking.vehicles = vehicles;
         myParking.announceColourCount(targetColour);
 
         
