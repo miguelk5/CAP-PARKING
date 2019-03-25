@@ -109,7 +109,9 @@ public class Controller {
         
         for( Vehicle vehicle: vehicles){
             if(myParking.getBicycleSlots()!= 0){
-                vehicle.enterParking(myParking.entryRequest(vehicle));
+                Boolean result = myParking.entryRequest(vehicle);
+                if (result) {myParking.vehicles.add(vehicle);}                
+                vehicle.enterParking(result);
             }
             else { System.out.println("No more Bicycle slots we stop the program");break;}                
         }
