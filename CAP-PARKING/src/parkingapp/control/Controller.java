@@ -26,7 +26,7 @@ public class Controller {
     List<Vehicle> vehicles = new ArrayList();
     int count = 0 ;
     
-    while ( count <= amount){
+    while ( count < amount){
     String colour = Constants.COLOURS[Numbers.randomWithRange(0, 3)];
     if ("CAR".equals(kind)){
         Car car = new Car(colour);
