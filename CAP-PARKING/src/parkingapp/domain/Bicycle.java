@@ -17,6 +17,11 @@ public class Bicycle extends Vehicle{
     public Bicycle(String colour) {
         super(colour);
     }
+
+    @Override
+    public String toString() {
+        return "Bicycle{" + super.toString() + '}' + "\n";
+    }
     
     
     

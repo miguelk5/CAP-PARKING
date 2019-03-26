@@ -24,5 +24,10 @@ public class Car extends Vehicle{
         if (entered) System.out.println("BROOM ! BROOM !, my colour is  :"+ this.getColour() +" and I can enter in to the Parking");
         else System.out.println("Dammit!, I can't enter the parking");
     }
-    
+
+    @Override
+    public String toString() {
+        return "Car{" + super.toString() + '}' + "\n";
+    }
+        
 }

@@ -69,7 +69,7 @@ public class MotorBike extends Vehicle{
 
     @Override
     public String toString() {
-        return "MotorBike{" + "trademark=" + trademark + '}';
+        return "MotorBike{" + "trademark=" + trademark + " " + super.toString() + '}' + "\n";
     }
     
     

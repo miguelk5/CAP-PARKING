@@ -6,6 +6,7 @@
 package parkingapp.control;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import parkingapp.domain.Bicycle;
@@ -107,6 +108,11 @@ public class Controller {
         vehicles.addAll(createRoster(motorBikeSlots+overSizeAmount , "MOTORBYKE"));
         vehicles.addAll(createRoster(BicycleSlots+overSizeAmount , "BICYCLE"));
         
+        Scanner reader = new Scanner(System.in);
+        
+        System.out.println("Do you want suffle the vechicles list ? if no order will be CAR -> MOTORBYKE -> BICYCLE: -1 yes -2 no");
+        if(reader.nextInt()==1){Collections.shuffle(vehicles);}        
+
         for( Vehicle vehicle: vehicles){
             if(myParking.getBicycleSlots()!= 0){
                 Boolean result = myParking.entryRequest(vehicle);
@@ -117,7 +123,8 @@ public class Controller {
         }
            
         myParking.announceColourCount(targetColour);
-
         
+        System.out.println("Do you want see the vehicles list in the parking ? : 1- yes 2-no ");
+        if(reader.nextInt()==1){System.out.println(myParking.vehicles.toString());}
     }
 }
