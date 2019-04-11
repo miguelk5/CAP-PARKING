@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author mjaramin
  */
-public class Vehicle {
+public abstract class Vehicle {
     
     private String colour;
 

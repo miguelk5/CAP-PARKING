@@ -50,7 +50,7 @@ public class Controller {
     }
     
     public static void main(String[] args) {
-        List<Vehicle> vehicles = new ArrayList();
+        List<Vehicle> vehicles = new ArrayList<>();
         Parking myParking;
         
         String ParkingName= "CAP-PARKING";
